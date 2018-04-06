@@ -1,0 +1,44 @@
+/*Universal Styles*/
+html {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+}
+
+/* Navigation*/
+
+nav {
+  height: 4rem;
+  background-color: white;
+  justify-content: space-between;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 2.5rem;
+}
+
+nav .logo span {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.menu {
+
+}
+
+.container .menu li {
+  display: inline-block;
+  align-items: space-around;
+  padding-left: 1rem;
+}
