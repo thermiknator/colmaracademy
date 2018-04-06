@@ -5,9 +5,14 @@ html {
   font-family: Helvetica, sans-serif;
 }
 
-.container {
+.container,
+.container-gray {
   display: flex;
   margin: auto;
+}
+
+.container-gray {
+  background-color: hsl(0, 0%, 66.7%);
 }
 
 /* Navigation*/
@@ -33,12 +38,40 @@ nav .logo span {
   font-size: 2rem;
 }
 
-.menu {
-
-}
-
 .container .menu li {
   display: inline-block;
   align-items: space-around;
   padding-left: 1rem;
+}
+
+/* Banner*/
+
+.banner {
+  padding: 2rem 1.5rem;
+  display: flex;
+  width: 100%;
+}
+
+.image {
+  width: 60%;
+  background:url("resources/images/banner.jpg") center no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textbanner {
+  width: 40%;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .textbanner h1 {
+  line-height: 1.4;
+  color: hsl(0, 0%, 30%);
+  font-size: 2rem;
+  display: flex;
+
 }
