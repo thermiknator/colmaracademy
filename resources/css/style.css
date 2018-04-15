@@ -13,13 +13,12 @@ a {
 .container-gray {
   display: flex;
   margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .container-gray {
   background-color: hsl(0, 0%, 66.7%);
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 
 .citation {
@@ -55,6 +54,43 @@ nav .logo span {
   display: inline-block;
   align-items: space-around;
   padding-left: 1rem;
+}
+
+.menu a:hover {
+  font-weight: 700;
+  transition: font-weight 200ms ease-in 700ms;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+/*Mobile Navigation*/
+@media only screen and (max-width: 641px) {
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+  }
+
+  .menu-mobile ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu-mobile li {
+    display: inline-block;
+  }
 }
 
 /* Banner*/
@@ -103,16 +139,28 @@ nav .logo span {
   font-size: 1rem;
 }
 
+.banner .textbanner p:hover {
+  font-size: 110%;
+  transition: font-size 0 linear 200ms;
+}
+
+
 .banner button {
   background-color: hsl(0, 0%, 30%);
   padding: 0.5rem 7rem;
-  border: 1px red solid;
+  border: 1px hsl(0, 0%, 40%) solid;
 }
 
-.banner button span {
-  color: white;
+.banner button a {
+  color: hsla(360, 100%, 100%, 1);
   font-weight: bold;
   font-size: 1rem;
+}
+
+.banner button:hover {
+  border: 3px hsl(0, 0%, 50%) solid;
+  background-color: hsl(0, 0%, 50%);
+  transition: all 300ms ease-in 200ms;
 }
 
 /*Information*/
@@ -122,13 +170,19 @@ nav .logo span {
   display: block;
   justify-content: space-between;
 }
+
+.main-info:hover, .banner .image:hover {
+  border: 4px hsl(0, 0%, 90%) solid;
+  transition: all 200ms ease-in 200ms;
+}
+
 .main-text, .main-info .image img {
   width: 100%;
   height: auto;
   line-height: 1.2;
 }
 
-.main-info .info-image {
+.main-info .info-image, .main-info video {
   width: 100%;
   overflow: hidden;
 }
@@ -190,7 +244,7 @@ nav .logo span {
 .info:hover, .teaser:hover {
   border-bottom: 4px hsl(0, 0%, 90%) solid;
   border-right: 4px hsl(0, 0%, 90%) solid;
-  transition: 100ms step-start 200ms all;
+  transition: 100ms step-start 200ms;
 }
 
 .info-title {
@@ -205,12 +259,17 @@ nav .logo span {
 
 /*Learn Teaser*/
 
+.learn-title {
+  width: 100%;
+}
+
 .learn-title h1 {
   line-height: 1.4;
   font-weight: bold;
   color: hsl(0, 0%, 30%);
   padding: 2rem 0 2rem 0;
   font-size: 2rem;
+  text-align: center;
 }
 
 .learn {
@@ -250,4 +309,20 @@ nav .logo span {
   font-size: 1rem;
   line-height: 0.75;
   padding: 1.5rem 0 1rem 0;
+}
+
+.video-section {
+  width: 40%;
+  height: auto;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-flow: column;
+}
+
+/*Footer*/
+footer {
+  padding: 1rem 1.5rem 3rem 1.5rem;
+  border-top: 1px hsl(0.6, 10%, 50%) solid;
+  display: flex;
+  justify-content: space-between;
 }
