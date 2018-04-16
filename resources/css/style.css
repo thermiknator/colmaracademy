@@ -56,9 +56,15 @@ nav .logo span {
   padding-left: 1rem;
 }
 
-.menu a:hover {
-  font-weight: 700;
-  transition: font-weight 200ms ease-in 700ms;
+.container .menu li a {
+  color: hsla(199, 83%, 52%, 0.96);
+}
+
+@media only screen and (min-width: 700px) {
+  .menu a:hover {
+    font-weight: 700;
+    transition: font-weight 200ms ease-in-out 200ms;
+  }
 }
 
 .menu-mobile {
@@ -66,7 +72,7 @@ nav .logo span {
 }
 
 /*Mobile Navigation*/
-@media only screen and (max-width: 641px) {
+@media only screen and (max-width: 699px) {
   .menu {
     display: none;
   }
@@ -139,11 +145,16 @@ nav .logo span {
   font-size: 1rem;
 }
 
-.banner .textbanner p:hover {
-  font-size: 110%;
-  transition: font-size 0 linear 200ms;
-}
+@media only screen and (min-width: 700px) {
+  .banner .textbanner p:hover {
+    text-decoration: underline;
+    transition: text-decoration 0 linear 200ms;
+  }
 
+  .banner .textbanner p:active {
+    color: hsla(199, 83%, 72%, 0.96);
+  }
+}
 
 .banner button {
   background-color: hsl(0, 0%, 30%);
@@ -157,10 +168,52 @@ nav .logo span {
   font-size: 1rem;
 }
 
-.banner button:hover {
-  border: 3px hsl(0, 0%, 50%) solid;
-  background-color: hsl(0, 0%, 50%);
-  transition: all 300ms ease-in 200ms;
+@media only screen and (min-width: 700px) {
+  .banner button:hover {
+    border: 3px hsla(199, 83%, 72%, 0.96) solid;
+    background-color: hsl(0, 0%, 50%);
+    transition: all 300ms ease-in 200ms;
+  }
+
+  .banner button:active {
+    background-color: hsla(199, 83%, 72%, 0.96);
+  }
+}
+
+/*Mobile-Banner*/
+@media only screen and (max-width: 699px) {
+  .banner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 0;
+  }
+
+  .banner .image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner .textbanner {
+    width: 100%;
+    padding: 0 0 2rem 0;
+  }
+
+  .banner .textbanner a {
+    display: block;
+    justify-content: center;
+  }
+
+  .banner .textbanner h1 {
+    color: hsl(0, 0%, 30%);
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  .banner .textbanner p {
+    font-size: 0.9rem;
+  }
 }
 
 /*Information*/
@@ -171,9 +224,11 @@ nav .logo span {
   justify-content: space-between;
 }
 
-.main-info:hover, .banner .image:hover {
-  border: 4px hsl(0, 0%, 90%) solid;
-  transition: all 200ms ease-in 200ms;
+@media only screen and (min-width: 700px) {
+  .main-info:hover, .banner .image:hover .main-video:hover {
+    border: 4px hsla(199, 83%, 82%, 0.96) solid;
+    transition: all 200ms ease-in 200ms;
+  }
 }
 
 .main-text, .main-info .image img {
@@ -182,26 +237,34 @@ nav .logo span {
   line-height: 1.2;
 }
 
+.main-text span {
+  color: hsla(199, 83%, 52%, 0.96);
+}
+
 .main-info .info-image, .main-info video {
   width: 100%;
   overflow: hidden;
 }
 
 .main-info .main-text h1,
-.main-info .main-text p {
+.main-info .main-text p
+.main-info .main-video h1,
+.main-info .main-video p {
   display: flex;
   flex-wrap: wrap;
   line-height: 1.4;
   font-weight: bold;
 }
 
-.main-info .main-text h1 {
+.main-info .main-text h1,
+.main-video .main-text h1 {
   color: hsl(0, 0%, 30%);
   padding: 2rem 0 1.5rem 0;
   font-size: 2rem;
 }
 
-.main-info .main-text p, .info-teaser p, .teaser-text p {
+.main-info .main-text p, .info-teaser p, .teaser-text p,
+.main-video .main-text p {
   color: hsl(0, 0%, 25%);
   font-size: 1rem;
 }
@@ -218,7 +281,6 @@ nav .logo span {
 .info {
   display: inline-flex;
   height: auto;
-  padding:
 }
 
 .info-image {
@@ -241,10 +303,12 @@ nav .logo span {
   justify-content: space-around;
 }
 
-.info:hover, .teaser:hover {
-  border-bottom: 4px hsl(0, 0%, 90%) solid;
-  border-right: 4px hsl(0, 0%, 90%) solid;
-  transition: 100ms step-start 200ms;
+@media only screen and (min-width: 700px) {
+  .info:hover, .teaser:hover {
+    border-bottom: 4px hsla(199, 83%, 82%, 0.96) solid;
+    border-right: 4px hsla(199, 83%, 82%, 0.96) solid;
+    transition: 100ms step-start 200ms;
+  }
 }
 
 .info-title {
@@ -254,7 +318,43 @@ nav .logo span {
 .info-title h2, .teaser-title h2 {
   color: hsl(0, 0%, 40%);
   font-size: 1.5rem;
-  line-height: 0.75;
+  line-height: 1;
+}
+/*Information-Mobile*/
+@media only screen and (max-width: 699px) {
+  .main-info {
+    display: none;
+  }
+
+  .more-info, .info, .info-image, .info-text {
+    width: 100%;
+  }
+
+  .more-info {
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .info {
+    display: block;
+  }
+
+  .info-text {
+    padding: 0.25rem 0 4rem 0;
+  }
+
+  .info-title {
+    padding: 1rem 0 0.5rem 0;
+  }
+
+  .info-teaser {
+    border-bottom: 2px hsl(0, 360%, 25%) solid;
+    padding: 0.5rem 0 1rem 0;
+  }
+
+  .info-image img {
+    background: url("resources/images/information-orientation.jpg") center no-repeat cover;
+    height: 17rem;
+  }
 }
 
 /*Learn Teaser*/
@@ -319,10 +419,102 @@ nav .logo span {
   flex-flow: column;
 }
 
+/*Learn Teaser Mobile*/
+@media only screen and (max-width: 699px) {
+  section.container-gray {
+    background-color: hsla(360, 100%, 100%, 1);
+    border-top: 1px hsla(0, 0%, 38%, 0.8) solid;
+    border-bottom: 1px hsla(0, 0%, 38%, 0.8) solid;
+  }
+
+  .learn-title h1 {
+    padding: 2rem 0 1rem 0;
+  }
+
+  ul li a figure {
+    display: none;
+  }
+
+  ul.learn {
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  .learn li {
+    width: 100%;
+    background-color: hsla(0, 0%, 38%, 0.8);
+    border-radius: 0.25rem;
+    margin-left: 0;
+  }
+
+  .teaser-textbox .teaser-title h2 {
+    color: hsla(199, 83%, 72%, 0.96);
+  }
+
+  .teaser-textbox .teaser-subtitle h3 {
+    color: white;
+  }
+
+  .teaser-textbox .teaser-subtitle p {
+    color: hsla(0, 0%, 69%, 1);
+  }
+}
+
+/*Video Section*/
+.main-video {
+  width: 60%;
+  display: block;
+  justify-content: space-between;
+  height: auto;
+}
+
+.main-video video {
+  width: 100%;
+}
+
+/*Video Section Mobile*/
+@media only screen and (max-width: 699px) {
+  .video-section {
+    display: none;
+  }
+
+  .main-video {
+    width: 100%;
+  }
+
+  .main-video .main-text {
+    display: none;
+  }
+}
+
 /*Footer*/
 footer {
   padding: 1rem 1.5rem 3rem 1.5rem;
   border-top: 1px hsl(0.6, 10%, 50%) solid;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 700px) {
+  span.logo-mobile {
+    display: none;
+  }
+}
+
+/*Footer Mobile*/
+@media only screen and (max-width: 699px) {
+  footer .menu, footer .logo {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .logo-mobile {
+    width: 100%;
+    text-align: center;
+    padding-top: 3rem
+  }
 }
