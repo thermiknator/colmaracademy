@@ -542,7 +542,7 @@ footer {
 }
 
 @media only screen and (min-width: 700px) {
-  span.logo-mobile {
+  .logo-mobile {
     display: none;
   }
 }
