@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>The Colmar Academy</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="./resources/css/reset.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Tajawal" rel="stylesheet">
+  -->
   </head>
   <body>
     <!--Navigation-->
@@ -14,7 +19,7 @@
         <span class="title">Colmar Academy</span>
       </div>
       <div class="menu">
-        <ul>
+        <ul role="presentation">
           <li>
             <a href="#">On Campus</a>
           </li>
@@ -31,7 +36,7 @@
       </div>
       <!--Mobile Navigation-->
       <div class="menu-mobile">
-        <ul>
+        <ul role="presentation">
           <li>
             <a href="#">
               <img src="resources/images/ic-logo.svg" alt="Logo Colmar Academy">
@@ -151,7 +156,7 @@
       <div class="learn-title">
         <h1>Start learning</h1>
       </div>
-      <ul class="learn">
+      <ul class="learn" role="presentation">
         <li class="teaser">
           <a href="#">
             <figure class="teaser-image">
@@ -322,9 +327,21 @@
     <!--Footer-->
     <footer class="container">
       <span class="logo">(c) 2016 Colmar Academy. All rights reserved.</span>
+      <div class="logo">
+        <span>Follow us</span>
+        <i class="fa fa-facebook fa-2x"></i>
+        <i class="fa fa-twitter fa-2x"></i>
+        <i class="fa fa-pinterest fa-2x"></i>
+      </div>
       <span class="logo-mobile">(c) 2016 Colmar Academy. All rights reserved.</span>
+      <div class="logo-mobile">
+        <span>Follow us</span>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-pinterest"></i>
+      </div>
       <div class="menu">
-        <ul>
+        <ul role="presentation">
           <li>
             <a href="#">Terms</a>
           </li>

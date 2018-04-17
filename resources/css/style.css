@@ -1,8 +1,35 @@
 /*Universal Styles*/
+
+/* latin */
+@font-face {
+  font-family: 'Tajawal';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tajawal'), local('Tajawal-Regular'), url(https://fonts.gstatic.com/s/tajawal/v1/Iura6YBj_oCad4k1nzGBC5xLhLE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Space Mono'), local('SpaceMono-Regular'), url(https://fonts.gstatic.com/s/spacemono/v2/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html {
   font-size: 16px;
   line-height: 1.2;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Space Mono', Tajawal, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Mono', Helvetica, sans-serif;
+}
+
+p, span, a, li {
+  font-family: Tajawal, Helvetica, sans-serif;
 }
 
 a {
@@ -18,7 +45,7 @@ a {
 }
 
 .container-gray {
-  background-color: hsl(0, 0%, 66.7%);
+  background-color: rgb(170, 131, 57);
 }
 
 .citation {
@@ -50,6 +77,10 @@ nav .logo span {
   font-size: 2rem;
 }
 
+span.title {
+  margin-bottom: -5px;
+}
+
 .container .menu li {
   display: inline-block;
   align-items: space-around;
@@ -57,7 +88,7 @@ nav .logo span {
 }
 
 .container .menu li a {
-  color: hsla(199, 83%, 52%, 0.96);
+  color: rgb(45, 68, 113);
 }
 
 @media only screen and (min-width: 700px) {
@@ -133,14 +164,19 @@ nav .logo span {
   font-weight: bold;
 }
 
+.main-info .main-text h1,
+.main-video .main-text h1
 .banner .textbanner h1 {
-  color: hsl(0, 0%, 30%);
+  color: rgb(78, 99, 141);
+}
+
+.banner .textbanner h1 {
   padding: 1rem 3rem 1.5rem 3rem;
   font-size: 2rem;
 }
 
 .banner .textbanner p {
-  color: hsl(0, 0%, 25%);
+  color: rgb(78, 99, 141);
   padding: 0 3rem 1.5rem 3rem;
   font-size: 1rem;
 }
@@ -152,31 +188,36 @@ nav .logo span {
   }
 
   .banner .textbanner p:active {
-    color: hsla(199, 83%, 72%, 0.96);
+    color: rgb(85, 56, 0);
   }
 }
 
 .banner button {
-  background-color: hsl(0, 0%, 30%);
+  background-color: rgb(63, 49, 117);
   padding: 0.5rem 7rem;
   border: 1px hsl(0, 0%, 40%) solid;
 }
 
 .banner button a {
-  color: hsla(360, 100%, 100%, 1);
+  color: rgb(135, 124, 176);
   font-weight: bold;
   font-size: 1rem;
 }
 
 @media only screen and (min-width: 700px) {
   .banner button:hover {
-    border: 3px hsla(199, 83%, 72%, 0.96) solid;
+    border: 3px rgb(135, 124, 176) solid;
     background-color: hsl(0, 0%, 50%);
     transition: all 300ms ease-in 200ms;
   }
 
+  .banner button a:hover {
+    color: rgb(63, 49, 117);
+    transition: all 300ms ease-in 200ms;
+  }
+
   .banner button:active {
-    background-color: hsla(199, 83%, 72%, 0.96);
+    background-color: rgb(63, 49, 117);
   }
 }
 
@@ -205,7 +246,7 @@ nav .logo span {
   }
 
   .banner .textbanner h1 {
-    color: hsl(0, 0%, 30%);
+    color: rgb(78, 99, 141);
     padding: 2rem 1rem;
     font-size: 1.5rem;
     justify-content: center;
@@ -225,8 +266,8 @@ nav .logo span {
 }
 
 @media only screen and (min-width: 700px) {
-  .main-info:hover, .banner .image:hover .main-video:hover {
-    border: 4px hsla(199, 83%, 82%, 0.96) solid;
+  .banner .main-info:hover, .banner .image:hover, .banner .main-video:hover {
+    border: 4px rgb(119, 136, 170) solid;
     transition: all 200ms ease-in 200ms;
   }
 }
@@ -238,7 +279,7 @@ nav .logo span {
 }
 
 .main-text span {
-  color: hsla(199, 83%, 52%, 0.96);
+  color: rgb(22, 43, 85);
 }
 
 .main-info .info-image, .main-info video {
@@ -258,14 +299,13 @@ nav .logo span {
 
 .main-info .main-text h1,
 .main-video .main-text h1 {
-  color: hsl(0, 0%, 30%);
   padding: 2rem 0 1.5rem 0;
   font-size: 2rem;
 }
 
 .main-info .main-text p, .info-teaser p, .teaser-text p,
 .main-video .main-text p {
-  color: hsl(0, 0%, 25%);
+  color: rgb(6, 23, 57);
   font-size: 1rem;
 }
 
@@ -305,18 +345,18 @@ nav .logo span {
 
 @media only screen and (min-width: 700px) {
   .info:hover, .teaser:hover {
-    border-bottom: 4px hsla(199, 83%, 82%, 0.96) solid;
-    border-right: 4px hsla(199, 83%, 82%, 0.96) solid;
+    border-bottom: 4px rgb(119, 136, 170) solid;
+    border-right: 4px rgb(119, 136, 170) solid;
     transition: 100ms step-start 200ms;
   }
 }
 
 .info-title {
-  border-bottom: 2px hsl(0, 360%, 25%) solid;
+  border-bottom: 2px rgb(212, 193, 106) solid;
 }
 
 .info-title h2, .teaser-title h2 {
-  color: hsl(0, 0%, 40%);
+  color: rgb(128, 109, 22);
   font-size: 1.5rem;
   line-height: 1;
 }
@@ -347,7 +387,7 @@ nav .logo span {
   }
 
   .info-teaser {
-    border-bottom: 2px hsl(0, 360%, 25%) solid;
+    border-bottom: 2px rgb(212, 193, 106) solid;
     padding: 0.5rem 0 1rem 0;
   }
 
@@ -405,7 +445,7 @@ nav .logo span {
 
 .teaser-subtitle {
   text-transform: capitalize;
-  color: hsl(0.6, 10%, 50%);
+  color: rgb(37, 24, 88);
   font-size: 1rem;
   line-height: 0.75;
   padding: 1.5rem 0 1rem 0;
@@ -422,9 +462,9 @@ nav .logo span {
 /*Learn Teaser Mobile*/
 @media only screen and (max-width: 699px) {
   section.container-gray {
-    background-color: hsla(360, 100%, 100%, 1);
-    border-top: 1px hsla(0, 0%, 38%, 0.8) solid;
-    border-bottom: 1px hsla(0, 0%, 38%, 0.8) solid;
+    background-color: rgb(119, 136, 170);
+    border-top: 1px rgb(18, 7, 59) solid;
+    border-bottom: 1px rgb(18, 7, 59) solid;
   }
 
   .learn-title h1 {
@@ -439,23 +479,30 @@ nav .logo span {
     padding: 0 1rem 2rem 1rem;
   }
 
-  .learn li {
+  .learn li:nth-child(2n+0) {
     width: 100%;
-    background-color: hsla(0, 0%, 38%, 0.8);
+    background-color: rgb(135, 124, 176);
+    border-radius: 0.25rem;
+    margin-left: 0;
+  }
+
+  .learn li:nth-child(2n+1) {
+    width: 100%;
+    background-color: rgb(255, 239, 170);
     border-radius: 0.25rem;
     margin-left: 0;
   }
 
   .teaser-textbox .teaser-title h2 {
-    color: hsla(199, 83%, 72%, 0.96);
+    color: rgb(22, 43, 85);
   }
 
   .teaser-textbox .teaser-subtitle h3 {
-    color: white;
+    color: rgb(85, 56, 0);
   }
 
   .teaser-textbox .teaser-subtitle p {
-    color: hsla(0, 0%, 69%, 1);
+    color: rgb(96, 82, 146);
   }
 }
 
@@ -489,7 +536,7 @@ nav .logo span {
 /*Footer*/
 footer {
   padding: 1rem 1.5rem 3rem 1.5rem;
-  border-top: 1px hsl(0.6, 10%, 50%) solid;
+  border-top: 1px rgb(96, 82, 146) solid;
   display: flex;
   justify-content: space-between;
 }
